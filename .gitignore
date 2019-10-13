@@ -1,0 +1,4 @@
+*.tfstate
+*.tfstate.*
+.git
+private_ssh_key
