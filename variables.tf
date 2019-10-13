@@ -10,12 +10,12 @@ variable "location" {
 
 variable "CLIENT_ID" {
   description = "The Client ID (appId) for the Service Principal used for the AKS deployment"
-  default = "226121aa-767a-4575-9f16-e3e629730a4e"
+  default = ""
 }
 
 variable "CLIENT_SECRET" {
   description = "The Client Secret (password) for the Service Principal used for the AKS deployment"
-  default = "07b7d238-11a6-498a-bde9-f60fc6951cf8"
+  default = ""
 }
 
 variable "admin_username" {
