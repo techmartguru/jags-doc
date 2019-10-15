@@ -20,4 +20,18 @@ module "kubernetes" {
   kubernetes_version              = var.kubernetes_version
   service_principal_client_id     = var.CLIENT_ID
   service_principal_client_secret = var.CLIENT_SECRET
+  }
+  
+  #### Terraform Backend State ###
+  terraform {
+  backend "azurerm" {
+    storage_account_name  = "roshazure"
+    container_name        = "roshazure"
+    key                   = "terraform.tfstate"
+  }
+}
+
+resource "azurerm_resource_group" "state-demo-secure" {
+  name     = "state-demo"
+  location = "eastus"
 }
